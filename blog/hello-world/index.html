@@ -1,46 +1,3 @@
-# kasperjunge.com
-
-Personal website for Kasper Junge.
-
-## Structure
-
-```
-kasperjunge.com/
-├── index.html          # Homepage
-├── blog/
-│   └── index.html      # Blog listing page
-└── README.md
-```
-
-## Adding Blog Posts
-
-### Step 1: Add entry to blog listing
-
-Edit `blog/index.html` and add a new `<li>` inside the `<ul class="posts">` element:
-
-```html
-<li>
-    <a href="/blog/my-post-slug">Post Title Here</a>
-    <div class="date">January 2026</div>
-    <div class="excerpt">A brief description of what the post is about...</div>
-</li>
-```
-
-**Fields:**
-- `href` — Link to the post (e.g., `/blog/my-post-slug`)
-- `Post Title` — The title displayed in the listing
-- `date` — Publication date (e.g., "January 2026", "Jan 15, 2026")
-- `excerpt` — Brief description (1-2 sentences)
-
-**Note:** Add newest posts at the top of the list. Remove the empty state `<div class="empty-state">` once you have posts.
-
-### Step 2: Create the post page
-
-Create a new folder and file: `blog/my-post-slug/index.html`
-
-Use this template:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,22 +5,22 @@ Use this template:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- POST METADATA -->
-    <title>Post Title Here — Kasper Junge</title>
-    <meta name="description" content="Brief description for SEO and social sharing.">
+    <title>Hello World — Kasper Junge</title>
+    <meta name="description" content="Welcome to my new blog. A fresh start for sharing thoughts on AI, software engineering, and building things.">
     <meta name="author" content="Kasper Junge">
     <meta name="date" content="2026-01-22">
     
-    <!-- Open Graph (for social sharing) -->
-    <meta property="og:title" content="Post Title Here">
-    <meta property="og:description" content="Brief description for social sharing.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hello World">
+    <meta property="og:description" content="Welcome to my new blog. A fresh start for sharing thoughts on AI, software engineering, and building things.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://kasperjunge.com/blog/my-post-slug">
+    <meta property="og:url" content="https://kasperjunge.com/blog/hello-world">
     
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@JungeKasper">
-    <meta name="twitter:title" content="Post Title Here">
-    <meta name="twitter:description" content="Brief description for Twitter.">
+    <meta name="twitter:title" content="Hello World">
+    <meta name="twitter:description" content="Welcome to my new blog. A fresh start for sharing thoughts on AI, software engineering, and building things.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,21 +62,30 @@ Use this template:
             <a href="/#contact">Contact</a>
         </nav>
 
-        <h1>Post Title Here</h1>
+        <h1>Hello World</h1>
         <div class="post-meta">January 22, 2026</div>
 
         <article>
-            <p>Your content goes here. Write in HTML.</p>
+            <p>Welcome to my new blog.</p>
             
-            <h2>Section Heading</h2>
-            <p>More content...</p>
+            <p>After years of writing on Medium and other platforms, I decided to build something simple and owned. No analytics, no cookies, no complexity — just words on a page.</p>
+
+            <h2>What to expect</h2>
+            <p>I'll be writing about:</p>
+            <ul>
+                <li>AI and LLMs — practical insights from building with them daily</li>
+                <li>Agentic coding — how AI is changing the way we write software</li>
+                <li>Open source — projects I'm working on and lessons learned</li>
+                <li>Random thoughts — whatever seems worth sharing</li>
+            </ul>
+
+            <h2>Why now?</h2>
+            <p>The tools for building on the web have never been simpler. This entire site is just HTML and CSS — no frameworks, no build steps, no dependencies. It loads fast and will work for years.</p>
             
-            <pre><code>// Code blocks look like this
-const example = "hello";</code></pre>
-            
-            <blockquote>
-                Blockquotes look like this.
-            </blockquote>
+            <p>Sometimes the best technology is the simplest.</p>
+
+            <h2>Let's connect</h2>
+            <p>Find me on <a href="https://x.com/JungeKasper">X</a> or <a href="https://www.linkedin.com/in/kasper-juunge/">LinkedIn</a>. I'd love to hear from you.</p>
         </article>
 
         <footer>
@@ -128,36 +94,3 @@ const example = "hello";</code></pre>
     </div>
 </body>
 </html>
-```
-
-### Metadata Reference
-
-| Field | Location | Example |
-|-------|----------|---------|
-| Title | `<title>` and `<h1>` | "Building AI Agents" |
-| Date | `<meta name="date">` and `.post-meta` | "2026-01-22" / "January 22, 2026" |
-| Description | `<meta name="description">` | "A guide to building AI agents..." |
-| URL slug | Folder name | `blog/building-ai-agents/` |
-| Author | `<meta name="author">` | "Kasper Junge" |
-
-## Deployment
-
-The site is static HTML and can be deployed to:
-- GitHub Pages
-- Netlify
-- Vercel
-- Any static hosting
-
-## Local Development
-
-Simply open `index.html` in a browser, or run a local server:
-
-```bash
-# Python
-python -m http.server 8000
-
-# Node.js
-npx serve
-```
-
-Then visit `http://localhost:8000`

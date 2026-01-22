@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Kasper Junge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #fafafa;
+            --text: #1a1a1a;
+            --text-muted: #666;
+            --accent: #0066cc;
+            --border: #e0e0e0;
+        }
+
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--text);
+        }
+
+        /* Header */
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            margin-bottom: 48px;
+        }
+
+        /* Links */
+        a {
+            color: var(--text);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        /* Blog posts list */
+        .posts {
+            list-style: none;
+        }
+
+        .posts li {
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .posts li:last-child {
+            border-bottom: none;
+        }
+
+        .posts a {
+            font-weight: 500;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .posts a:hover {
+            text-decoration: underline;
+        }
+
+        .posts .date {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        .posts .excerpt {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            line-height: 1.6;
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-state p {
+            margin-bottom: 16px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 80px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Kasper Junge</a>
+            <a href="/#services">Services</a>
+            <a href="/blog" class="active">Blog</a>
+            <a href="/#media">Media</a>
+            <a href="/#contact">Contact</a>
+        </nav>
+
+        <h1>Blog</h1>
+        <p class="subtitle">Thoughts on AI, LLMs, and building software.</p>
+
+        <ul class="posts">
+            <li>
+                <a href="/blog/hello-world">Hello World</a>
+                <div class="date">January 22, 2026</div>
+                <div class="excerpt">Welcome to my new blog. A fresh start for sharing thoughts on AI, software engineering, and building things.</div>
+            </li>
+        </ul>
+
+        <footer>
+            <a href="/">← Back to home</a>
+        </footer>
+    </div>
+</body>
+</html>

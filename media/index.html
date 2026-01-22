@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media — Kasper Junge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #fafafa; --text: #1a1a1a; --text-muted: #666; --accent: #0066cc; --border: #e0e0e0; }
+        body { font-family: 'IBM Plex Mono', monospace; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 15px; }
+        .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+        nav { display: flex; gap: 24px; margin-bottom: 60px; flex-wrap: wrap; }
+        nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        nav a:hover, nav a.active { color: var(--text); }
+        h1 { font-size: 28px; font-weight: 600; margin-bottom: 16px; letter-spacing: -0.5px; }
+        .subtitle { color: var(--text-muted); margin-bottom: 48px; }
+        h2 { font-size: 18px; font-weight: 600; margin-top: 48px; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+        h2:first-of-type { margin-top: 0; }
+        a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+        a:hover { color: var(--accent); }
+        .media-list { list-style: none; margin: 0; }
+        .media-list li { margin-bottom: 16px; padding-left: 0; }
+        .media-list li::before { display: none; }
+        .media-list a { text-decoration: none; }
+        .media-list a:hover { text-decoration: underline; }
+        .media-list .source { font-size: 13px; color: var(--text-muted); margin-left: 8px; }
+        .highlight-item { background: #fff; border: 1px solid var(--border); padding: 16px; margin-bottom: 16px; border-radius: 4px; }
+        .highlight-item .type { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .highlight-item .title { font-weight: 500; }
+        .highlight-item .venue { font-size: 14px; color: var(--text-muted); margin-top: 4px; }
+        footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+        footer a { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Kasper Junge</a>
+            <a href="/#services">Services</a>
+            <a href="/blog">Blog</a>
+            <a href="/media" class="active">Media</a>
+            <a href="/#contact">Contact</a>
+        </nav>
+
+        <h1>Media</h1>
+        <p class="subtitle">Podcasts, articles, talks, and interviews.</p>
+
+        <!-- Highlights -->
+        <div class="highlight-item">
+            <div class="type">Award</div>
+            <div class="title"><a href="https://hyperight.com/data-and-ai-influencer-of-the-year-nordic-dair-awards-2023/">Nordic Data & AI Influencer of the Year</a></div>
+            <div class="venue">DAIR Awards 2023</div>
+        </div>
+
+        <div class="highlight-item">
+            <div class="type">Parliament Citation</div>
+            <div class="title"><a href="https://www.youtube.com/shorts/4PWvRZRSEds?si=qDFDMwwkGUsTEAEL">Danish Language Models & AI Development</a></div>
+            <div class="venue">Danish Parliament (Folketinget)</div>
+        </div>
+
+        <h2>Podcasts</h2>
+        <ul class="media-list">
+            <li><a href="https://podcasts.apple.com/dk/podcast/techtopia-386-hvad-er-vibe-coding/id1236652961?i=1000736045790">Hvad er Vibe Coding?</a> <span class="source">Techtopia</span></li>
+            <li><a href="https://podcasts.apple.com/dk/podcast/13-vi-f%C3%A5r-bes%C3%B8g-af-kasper-junge-fra-dinero-og-taler-om-ai/id1810152143?i=1000714132166&l=da">AI hos Dinero</a> <span class="source">Podcast</span></li>
+            <li><a href="https://podcasts.apple.com/dk/podcast/hj%C3%A6lp-min-chef-kaster-med-kuglepenne/id1710936746?i=1000669646946">Hjælp min chef kaster med kuglepenne</a> <span class="source">Podcast</span></li>
+            <li><a href="https://podcasts.apple.com/dk/podcast/88-dinero-ai-til-digitale-regnskabskunder/id1581387126?i=1000667239405">Dinero: AI til digitale regnskabskunder</a> <span class="source">Podcast</span></li>
+            <li><a href="https://podcasts.apple.com/dk/podcast/kunsten-at-kode-penge-med-kasper-junge/id1741788842?i=1000666856911&l=da">Kunsten at kode penge</a> <span class="source">Podcast</span></li>
+            <li><a href="https://podcasts.apple.com/dk/podcast/g%C3%A6st-kasper-junge-under-k%C3%B8lerhjelmen-p%C3%A5-chatgpt/id1679832530?i=1000650020363&l=da">Under kølerhjelmen på ChatGPT</a> <span class="source">Podcast</span></li>
+            <li><a href="https://podcasts.apple.com/dk/podcast/openai-vil-g%C3%B8re-det-nemmere-at-lave-digitale-assistenter/id1591937564?i=1000635763835">OpenAI vil gøre det nemmere at lave digitale assistenter</a> <span class="source">Podcast</span></li>
+            <li><a href="https://podcasts.apple.com/dk/podcast/60-gpt-4-april-2023/id1581387126?i=1000608566988&l=da">GPT-4</a> <span class="source">Podcast</span></li>
+            <li><a href="https://podcasts.apple.com/se/podcast/59-chat-gpt-december-2022/id1581387126?i=1000591666570">ChatGPT</a> <span class="source">Podcast</span></li>
+            <li><a href="https://inspari.dk/dataklubben-s5-ep6-ddsc">DDSC</a> <span class="source">Dataklubben</span></li>
+            <li><a href="https://edb50.podbean.com/e/kasper-junge-ebddsc/">EDB & DDSC</a> <span class="source">EDB50</span></li>
+            <li><a href="https://www.it-jobbank.dk/cms/podcast-kasper-junge-del-2">Kasper Junge Del 2</a> <span class="source">IT-Jobbank</span></li>
+            <li><a href="https://ida.dk/raad-og-karriere/idas-podcast/techtopia">Techtopia</a> <span class="source">IDA</span></li>
+            <li><a href="https://www.dr.dk/lyd/p1/klog-paa-sprog/klog-paa-sprog-2022/hvordan-taler-computere-11032207055">Hvordan taler computere?</a> <span class="source">DR P1 — Klog på Sprog</span></li>
+        </ul>
+
+        <h2>Articles</h2>
+        <ul class="media-list">
+            <li><a href="https://www.berlingske.dk/virksomheder/eksperterne-kommer-med-deres-bud-her-er-de-mest-interessante-teknologiske-trends-i-2026">Mest interessante teknologiske trends i 2026</a> <span class="source">Berlingske</span></li>
+            <li><a href="https://www.version2.dk/artikel/mange-af-vores-kunder-foretraekker-faktisk-tale-med-chatbotten">Mange kunder foretrækker at tale med chatbotten</a> <span class="source">Version2</span></li>
+            <li><a href="https://www.version2.dk/artikel/du-er-en-ekspert-react-udvikler-skriv-altid-sikker-kode-her-er-de-simple-prompts-bag-ai-sensation">Simple prompts bag AI sensation</a> <span class="source">Version2</span></li>
+            <li><a href="https://borsen.dk/nyheder/tech/chat-gpt-sparer-ham-for-ti-timers-arbejde-om-ugen">ChatGPT sparer ham for ti timers arbejde om ugen</a> <span class="source">Børsen</span></li>
+            <li><a href="https://borsen.dk/nyheder/ai/thorborg-vil-naa-ny-milepael-og-udvider-ai-afdeling?b_source=mine-gemte-artikler&b_medium=row_1&b_campaign=list_1">Thorborg udvider AI-afdeling</a> <span class="source">Børsen</span></li>
+            <li><a href="https://finans.dk/tech/ECE16953226/dinero-opruster-med-ny-aichef/">Dinero opruster med ny AI-chef</a> <span class="source">Finans</span></li>
+            <li><a href="https://www.computerworld.dk/art/287525/dansk-prompt-ekspert-saadan-faar-du-mest-ud-af-chatgpt">Sådan får du mest ud af ChatGPT</a> <span class="source">Computerworld</span></li>
+            <li><a href="https://www.computerworld.dk/partner/131868/podcast-ai-kommer-til-at-betyde-ligesaa-meget-for-software-som-lyd-har-betydet-boeger">AI kommer til at betyde ligeså meget for software</a> <span class="source">Computerworld</span></li>
+            <li><a href="https://www.computerworld.dk/art/286646/morgen-briefing-ib-kunoee-koeber-columbus-aktier-for-godt-1-3-millioner-dinero-satser-haardt-paa-kunstig-intelligens-halvdelen-af-danskerne-er-nysgerrige-over-for-kunstig-intelligens">Dinero satser hårdt på kunstig intelligens</a> <span class="source">Computerworld</span></li>
+            <li><a href="https://itwatch.dk/ITNyt/Brancher/kunstig_intelligens/article17925992.ece">AI artikel</a> <span class="source">ITWatch</span></li>
+            <li><a href="https://itwatch.dk/ITNyt/Brancher/software/article16953065.ece">Software artikel</a> <span class="source">ITWatch</span></li>
+            <li><a href="https://www.mm.dk/artikel/ai-i-alt">AI i alt</a> <span class="source">Mandag Morgen</span></li>
+            <li><a href="https://pro.ing.dk/datatech/artikel/dansk-data-science-skal-organiseres-det-handler-om-open-source-og-det-handler-om">Dansk data science skal organiseres</a> <span class="source">Ingeniøren</span></li>
+            <li><a href="https://bureaubiz.dk/de-har-leveret-og-har-potentiale-til-mere-5-digitale-talenter/">5 digitale talenter</a> <span class="source">BureauBiz</span></li>
+        </ul>
+
+        <h2>Case Studies</h2>
+        <ul class="media-list">
+            <li><a href="https://www.danskindustri.dk/vi-radgiver-dig/virksomhedsregler-og-varktojer/ai/cases-og-eksempler/casearkiv-ai-for-alle/dinero/">Dinero AI Case</a> <span class="source">Dansk Industri</span></li>
+            <li><a href="https://www.danskerhverv.dk/branche/digitalisering-teknologi--tele/ai-portalen/ai-i-forretningen/ai-katalog-se-de-gode-eksempler/dinero/">Dinero AI Katalog</a> <span class="source">Dansk Erhverv</span></li>
+        </ul>
+
+        <h2>Videos & Talks</h2>
+        <ul class="media-list">
+            <li><a href="https://www.youtube.com/watch?v=eaAv98p327k">YouTube Talk</a> <span class="source">YouTube</span></li>
+            <li><a href="https://www.youtube.com/watch?v=zErbYqQb-HM">YouTube Presentation</a> <span class="source">YouTube</span></li>
+            <li><a href="https://www.youtube.com/watch?v=cgJ3Oqs5wRI">YouTube Video</a> <span class="source">YouTube</span></li>
+            <li><a href="https://www.youtube.com/watch?v=9xxW-0ZLyiE">YouTube Session</a> <span class="source">YouTube</span></li>
+            <li><a href="https://videos.ida.dk/media/Generativ+AI+med+GPT-4/1_ajgeuxey">Generativ AI med GPT-4</a> <span class="source">IDA</span></li>
+            <li><a href="https://videos.ida.dk/media/Generativ+AI+i+praksis/1_fi689bm6">Generativ AI i praksis</a> <span class="source">IDA</span></li>
+        </ul>
+
+        <footer>
+            <a href="/">← Back to home</a>
+        </footer>
+    </div>
+</body>
+</html>
