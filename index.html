@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasper Junge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #fafafa;
+            --text: #1a1a1a;
+            --text-muted: #666;
+            --accent: #0066cc;
+            --border: #e0e0e0;
+        }
+
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--text);
+        }
+
+        /* Header */
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            letter-spacing: -0.5px;
+        }
+
+        /* Main content */
+        .intro {
+            margin-bottom: 48px;
+        }
+
+        .intro p {
+            margin-bottom: 16px;
+        }
+
+        /* Links in text */
+        a {
+            color: var(--text);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        /* Bullet list */
+        ul {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        ul li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--text-muted);
+        }
+
+        /* Nested list */
+        ul ul {
+            margin: 8px 0 8px 0;
+        }
+
+        ul ul li {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        ul ul li::before {
+            content: "◦";
+        }
+
+        ul ul li a {
+            color: var(--text-muted);
+        }
+
+        ul ul li a:hover {
+            color: var(--text);
+        }
+
+        /* Social links row */
+        .socials {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .socials a {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .socials a:hover {
+            color: var(--text);
+        }
+
+        /* Section headers */
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Blog posts list */
+        .posts {
+            list-style: none;
+        }
+
+        .posts li {
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .posts li::before {
+            display: none;
+        }
+
+        .posts a {
+            display: block;
+        }
+
+        .posts .date {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Media section */
+        .media-item {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .media-item:last-child {
+            border-bottom: none;
+        }
+
+        .media-item .type {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .media-item .title {
+            font-weight: 500;
+        }
+
+        .media-item .venue {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Contact */
+        .contact-email {
+            font-size: 16px;
+            margin-top: 16px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 80px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Highlight/badge */
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+
+        /* Services section */
+        .service-item {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .service-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .service-desc {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="#about" class="active">About</a>
+            <a href="#services">Services</a>
+            <a href="#blog">Blog</a>
+            <a href="#media">Media</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <h1>Kasper Junge</h1>
+
+        <section id="about" class="intro">
+            <ul>
+                <li>AI Engineer at <a href="https://dinero.dk">Dinero</a>, building with LLMs and Generative AI.</li>
+                
+                <li>Chairman of the <a href="https://ddsc.io">Danish Data Science Community</a>, a nonprofit with 4,800+ members.</li>
+                
+                <li><span class="highlight">Nordic Data & AI Influencer of the Year 2023</span> — DAIR Award winner.</li>
+
+                <li>Cited in the <a href="https://www.youtube.com/shorts/4PWvRZRSEds?si=qDFDMwwkGUsTEAEL">Danish Parliament</a> on the importance of Danish language models.</li>
+                
+                <li>Open source projects:
+                    <ul>
+                        <li><a href="https://github.com/kasperjunge/agent-resources">agent-resources</a> — Package manager for Claude Code skills (340+ ⭐)</li>
+                        <li><a href="https://github.com/kasperjunge/copcon">copcon</a> — Copy project context to clipboard for LLMs</li>
+                        <li><a href="https://github.com/kasperjunge/danish-bert-embeddings">danish-bert-embeddings</a> — Danish NLP embeddings</li>
+                    </ul>
+                </li>
+
+                <li>I write about AI, LLMs, and building software at <a href="https://blog.kasperjunge.com">blog.kasperjunge.com</a>.</li>
+
+                <li>Co-host of the Verbos Podcast.</li>
+
+                <li>Based in Copenhagen, Denmark.</li>
+            </ul>
+
+            <div class="socials">
+                <a href="https://github.com/kasperjunge/">GitHub</a>
+                <a href="https://www.linkedin.com/in/kasper-juunge/">LinkedIn</a>
+                <a href="https://x.com/JungeKasper">X</a>
+                <a href="https://bsky.app/profile/kasperjunge.bsky.social">Bluesky</a>
+                <a href="https://www.youtube.com/channel/UCB1Cg40cN77lhbKBColnbCA">YouTube</a>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Work With Me</h2>
+            <p>I help engineering teams level up with AI-assisted development.</p>
+            
+            <div class="service-item">
+                <div class="service-title">Workshops</div>
+                <div class="service-desc">Hands-on training in agentic coding and vibe coding for software engineers. Learn to 10x your productivity with AI tools like Cursor, Claude Code, and Copilot.</div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-title">Speaking</div>
+                <div class="service-desc">Keynotes and talks on AI-assisted development, LLMs in production, and the future of software engineering.</div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-title">Consulting</div>
+                <div class="service-desc">Strategic guidance on integrating AI into your development workflow and building LLM-powered products.</div>
+            </div>
+
+            <p style="margin-top: 24px;"><a href="#contact">Get in touch →</a></p>
+        </section>
+
+        <section id="blog">
+            <h2>Recent Writing</h2>
+            <ul class="posts">
+                <li>
+                    <a href="https://blog.kasperjunge.com/posts/2025/100-best-tips-tricks-hacks-and-methods-users-of-cursor-have-for-coding-with-ai-in-cursor/">100 Best Tips, Tricks, Hacks, and Methods for Coding with AI in Cursor</a>
+                    <div class="date">March 2025</div>
+                </li>
+                <li>
+                    <a href="https://blog.kasperjunge.com/posts/2025/deepgemm/">Investigating the DeepSeek DeepGEMM Release</a>
+                    <div class="date">February 2025</div>
+                </li>
+                <li>
+                    <a href="https://blog.kasperjunge.com/posts/2025/the-next-big-platform-is-language/">The Next Big Platform Is Language</a>
+                    <div class="date">2025</div>
+                </li>
+                <li>
+                    <a href="https://kasperjunge.github.io/posts/2025/how-xai-made-the-world-largest-gpu-cluster-operational-in-122-days/">How xAI Made the World's Largest GPU Cluster Operational in 122 Days</a>
+                    <div class="date">2025</div>
+                </li>
+            </ul>
+            <p><a href="https://blog.kasperjunge.com">View all posts →</a></p>
+        </section>
+
+        <section id="media">
+            <h2>Media & Speaking</h2>
+            
+            <div class="media-item">
+                <div class="type">Award</div>
+                <div class="title">Nordic Data & AI Influencer of the Year</div>
+                <div class="venue">DAIR Awards 2023</div>
+            </div>
+
+            <div class="media-item">
+                <div class="type">Parliament Citation</div>
+                <div class="title">Danish Language Models & AI Development</div>
+                <div class="venue">Danish Parliament (Folketinget)</div>
+            </div>
+
+            <div class="media-item">
+                <div class="type">Podcast</div>
+                <div class="title">Verbos Podcast</div>
+                <div class="venue">Co-host — Discussions on machine learning and AI</div>
+            </div>
+
+            <div class="media-item">
+                <div class="type">Community</div>
+                <div class="title">DDSC New Year's Speech</div>
+                <div class="venue">Danish Data Science Community, 2022</div>
+            </div>
+
+            <!-- Add more media appearances here -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Want to collaborate, speak at your event, or just chat about AI?</p>
+            <p class="contact-email"><a href="mailto:hello@kasperjunge.com">hello@kasperjunge.com</a></p>
+            
+            <div class="socials" style="margin-top: 24px;">
+                <a href="https://www.linkedin.com/in/kasper-juunge/">LinkedIn</a>
+                <a href="https://x.com/JungeKasper">X / Twitter</a>
+            </div>
+        </section>
+
+        <footer>
+            Kasper Junge · Copenhagen, Denmark
+        </footer>
+    </div>
+</body>
+</html>
