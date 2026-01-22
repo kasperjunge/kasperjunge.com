@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — Kasper Junge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #fafafa; --text: #1a1a1a; --text-muted: #666; --accent: #0066cc; --border: #e0e0e0; }
+        body { font-family: 'IBM Plex Mono', monospace; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 15px; }
+        .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+        nav { display: flex; gap: 24px; margin-bottom: 60px; flex-wrap: wrap; }
+        nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        nav a:hover, nav a.active { color: var(--text); }
+        h1 { font-size: 28px; font-weight: 600; margin-bottom: 16px; letter-spacing: -0.5px; }
+        .subtitle { color: var(--text-muted); margin-bottom: 48px; }
+        a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+        a:hover { color: var(--accent); }
+        .service-item { margin: 24px 0; padding: 24px; background: #fff; border: 1px solid var(--border); border-radius: 4px; }
+        .service-title { font-weight: 600; font-size: 17px; margin-bottom: 12px; }
+        .service-title a { text-decoration: none; }
+        .service-title a:hover { text-decoration: underline; }
+        .service-desc { color: var(--text-muted); font-size: 14px; line-height: 1.6; }
+        .cta { margin-top: 48px; padding: 24px; background: #fff; border: 1px solid var(--border); border-radius: 4px; text-align: center; }
+        .cta p { margin-bottom: 16px; }
+        footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+        footer a { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Kasper Junge</a>
+            <a href="/services" class="active">Services</a>
+            <a href="/blog">Blog</a>
+            <a href="/media">Media</a>
+            <a href="/contact">Contact</a>
+        </nav>
+
+        <h1>Work With Me</h1>
+        <p class="subtitle">I help engineering teams level up with AI-assisted development.</p>
+
+        <div class="service-item">
+            <div class="service-title"><a href="https://vibe-coding.dk/">Workshops</a></div>
+            <div class="service-desc">Hands-on training in agentic coding and vibe coding for software engineers. Learn to 10x your productivity with AI tools like Cursor, Claude Code, and Copilot. <a href="https://vibe-coding.dk/">Learn more →</a></div>
+        </div>
+
+        <div class="service-item">
+            <div class="service-title">Speaking</div>
+            <div class="service-desc">Keynotes and talks on AI-assisted development, LLMs in production, and the future of software engineering. I've spoken at conferences, meetups, and corporate events across Denmark.</div>
+        </div>
+
+        <div class="service-item">
+            <div class="service-title">Consulting</div>
+            <div class="service-desc">Strategic guidance on integrating AI into your development workflow and building LLM-powered products. From proof-of-concept to production deployment.</div>
+        </div>
+
+        <div class="cta">
+            <p>Interested in working together?</p>
+            <a href="/contact">Get in touch →</a>
+        </div>
+
+        <footer>
+            <a href="/">← Back to home</a>
+        </footer>
+    </div>
+</body>
+</html>

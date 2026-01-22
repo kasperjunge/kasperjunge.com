@@ -252,11 +252,11 @@
 <body>
     <div class="container">
         <nav>
-            <a href="#about" class="active">About</a>
-            <a href="#services">Services</a>
+            <a href="/" class="active">About</a>
+            <a href="/services">Services</a>
             <a href="/blog">Blog</a>
             <a href="/media">Media</a>
-            <a href="#contact">Contact</a>
+            <a href="/contact">Contact</a>
         </nav>
 
         <h1>Kasper Junge</h1>
@@ -265,7 +265,7 @@
             <ul>
                 <li>AI Engineer at <a href="https://dinero.dk">Dinero</a>, building with LLMs and Generative AI.</li>
                 
-                <li>Co-founder of the <a href="https://ddsc.io">Danish Data Science Community</a>, a nonprofit with 4,800+ members.</li>
+                <li>Co-founder of the <a href="https://ddsc.io">Danish Data Science Community</a>, a nonprofit with 1,200+ members.</li>
                 
                 <li><span class="highlight"><a href="https://hyperight.com/data-and-ai-influencer-of-the-year-nordic-dair-awards-2023/" style="text-decoration: none; color: inherit;">Nordic Data & AI Influencer of the Year 2023</a></span> — DAIR Award winner.</li>
 
@@ -273,7 +273,7 @@
                 
                 <li>Open source projects:
                     <ul>
-                        <li><a href="https://github.com/kasperjunge/agent-resources">agent-resources</a> — Package manager for Claude Code skills (340+ ⭐)</li>
+                        <li><a href="https://github.com/kasperjunge/agent-resources">agent-resources</a> — Package manager for AI agents <span class="github-stars" data-repo="kasperjunge/agent-resources"></span></li>
                         <li><a href="https://github.com/kasperjunge/copcon">copcon</a> — Copy project context to clipboard for LLMs</li>
                     </ul>
                 </li>
@@ -292,77 +292,25 @@
             </div>
         </section>
 
-        <section id="services">
-            <h2>Work With Me</h2>
-            <p>I help engineering teams level up with AI-assisted development.</p>
-            
-            <div class="service-item">
-                <div class="service-title"><a href="https://vibe-coding.dk/" style="text-decoration: none; color: inherit;">Workshops</a></div>
-                <div class="service-desc">Hands-on training in agentic coding and vibe coding for software engineers. Learn to 10x your productivity with AI tools like Cursor, Claude Code, and Copilot. <a href="https://vibe-coding.dk/">Learn more →</a></div>
-            </div>
-
-            <div class="service-item">
-                <div class="service-title">Speaking</div>
-                <div class="service-desc">Keynotes and talks on AI-assisted development, LLMs in production, and the future of software engineering.</div>
-            </div>
-
-            <div class="service-item">
-                <div class="service-title">Consulting</div>
-                <div class="service-desc">Strategic guidance on integrating AI into your development workflow and building LLM-powered products.</div>
-            </div>
-
-            <p style="margin-top: 24px;"><a href="#contact">Get in touch →</a></p>
-        </section>
-
-        <section id="writing">
-            <h2>Writing</h2>
-            <ul class="posts">
-                <li>
-                    <a href="/blog/hello-world">Hello World</a>
-                    <div class="date">January 22, 2026</div>
-                </li>
-            </ul>
-            <p><a href="/blog">View all posts →</a></p>
-        </section>
-
-        <section id="media">
-            <h2>Media</h2>
-            
-            <div class="media-item">
-                <div class="type">Award</div>
-                <div class="title">Nordic Data & AI Influencer of the Year</div>
-                <div class="venue">DAIR Awards 2023</div>
-            </div>
-
-            <div class="media-item">
-                <div class="type">Parliament</div>
-                <div class="title">Danish Language Models & AI Development</div>
-                <div class="venue">Cited in the Danish Parliament (Folketinget)</div>
-            </div>
-
-            <div class="media-item">
-                <div class="type">Podcast</div>
-                <div class="title">Verbos Podcast</div>
-                <div class="venue">Co-host — Denmark's podcast for AI and software engineers</div>
-            </div>
-
-            <p style="margin-top: 24px;"><a href="/media">View all media appearances →</a></p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Want to collaborate, speak at your event, or just chat about AI?</p>
-            <p class="contact-email"><a href="mailto:hello@kasperjunge.com">hello@kasperjunge.com</a></p>
-            
-            <div class="socials" style="margin-top: 24px;">
-                <a href="https://www.linkedin.com/in/kasper-juunge/">LinkedIn</a>
-                <a href="https://x.com/JungeKasper">X / Twitter</a>
-            </div>
-        </section>
-
         <footer>
             Kasper Junge · Copenhagen, Denmark
         </footer>
     </div>
+
+    <script>
+        // Fetch GitHub stars dynamically
+        document.querySelectorAll('.github-stars').forEach(async (el) => {
+            const repo = el.dataset.repo;
+            try {
+                const response = await fetch(`https://api.github.com/repos/${repo}`);
+                const data = await response.json();
+                if (data.stargazers_count) {
+                    el.textContent = `(${data.stargazers_count.toLocaleString()}+ ⭐)`;
+                }
+            } catch (e) {
+                // Silently fail - no stars shown if API fails
+            }
+        });
+    </script>
 </body>
 </html>

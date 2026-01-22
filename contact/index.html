@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Kasper Junge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #fafafa; --text: #1a1a1a; --text-muted: #666; --accent: #0066cc; --border: #e0e0e0; }
+        body { font-family: 'IBM Plex Mono', monospace; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 15px; }
+        .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+        nav { display: flex; gap: 24px; margin-bottom: 60px; flex-wrap: wrap; }
+        nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        nav a:hover, nav a.active { color: var(--text); }
+        h1 { font-size: 28px; font-weight: 600; margin-bottom: 16px; letter-spacing: -0.5px; }
+        .subtitle { color: var(--text-muted); margin-bottom: 48px; }
+        a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+        a:hover { color: var(--accent); }
+        .contact-email { font-size: 18px; margin: 32px 0; }
+        .contact-email a { font-weight: 500; }
+        h2 { font-size: 16px; font-weight: 600; margin-top: 48px; margin-bottom: 16px; color: var(--text-muted); }
+        .socials { display: flex; gap: 20px; flex-wrap: wrap; }
+        .socials a { color: var(--text-muted); font-size: 14px; }
+        .socials a:hover { color: var(--text); }
+        footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+        footer a { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Kasper Junge</a>
+            <a href="/services">Services</a>
+            <a href="/blog">Blog</a>
+            <a href="/media">Media</a>
+            <a href="/contact" class="active">Contact</a>
+        </nav>
+
+        <h1>Contact</h1>
+        <p class="subtitle">Want to collaborate, speak at your event, or just chat about AI?</p>
+
+        <div class="contact-email">
+            <a href="mailto:hello@kasperjunge.com">hello@kasperjunge.com</a>
+        </div>
+
+        <h2>Connect</h2>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/kasper-juunge/">LinkedIn</a>
+            <a href="https://x.com/JungeKasper">X / Twitter</a>
+            <a href="https://bsky.app/profile/kasperjunge.bsky.social">Bluesky</a>
+            <a href="https://github.com/kasperjunge/">GitHub</a>
+            <a href="https://www.youtube.com/channel/UCB1Cg40cN77lhbKBColnbCA">YouTube</a>
+        </div>
+
+        <footer>
+            <a href="/">← Back to home</a>
+        </footer>
+    </div>
+</body>
+</html>
