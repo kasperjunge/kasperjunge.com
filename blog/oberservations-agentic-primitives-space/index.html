@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- POST METADATA -->
+    <title>Skills Are Replacing Commands, Rules, and Subagents — Kasper Junge</title>
+    <meta name="description" content="OpenAI deprecated custom prompts. Cursor built a migration tool. The evidence is clear: skills are replacing commands, rules, and subagents.">
+    <meta name="author" content="Kasper Junge">
+    <meta name="date" content="2026-01-23">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Skills Are Replacing Commands, Rules, and Subagents">
+    <meta property="og:description" content="OpenAI deprecated custom prompts. Cursor built a migration tool. The evidence is clear: skills are replacing commands, rules, and subagents.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kasperjunge.com/blog/oberservations-agentic-primitives-space">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@JungeKasper">
+    <meta name="twitter:title" content="Skills Are Replacing Commands, Rules, and Subagents">
+    <meta name="twitter:description" content="OpenAI deprecated custom prompts. Cursor built a migration tool. The evidence is clear: skills are replacing commands, rules, and subagents.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #fafafa; --text: #1a1a1a; --text-muted: #666; --accent: #0066cc; --border: #e0e0e0; }
+        body { font-family: 'IBM Plex Mono', monospace; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 15px; }
+        .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+        nav { display: flex; gap: 24px; margin-bottom: 60px; flex-wrap: wrap; }
+        nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        nav a:hover { color: var(--text); }
+        h1 { font-size: 28px; font-weight: 600; margin-bottom: 16px; letter-spacing: -0.5px; }
+        .post-meta { color: var(--text-muted); font-size: 14px; margin-bottom: 48px; }
+        article { margin-bottom: 60px; }
+        article h2 { font-size: 20px; margin-top: 40px; margin-bottom: 16px; }
+        article h3 { font-size: 17px; margin-top: 32px; margin-bottom: 12px; }
+        article p { margin-bottom: 20px; }
+        article ul, article ol { margin: 20px 0; padding-left: 24px; }
+        article li { margin-bottom: 8px; }
+        article pre { background: #fff; border: 1px solid var(--border); padding: 16px; overflow-x: auto; margin: 20px 0; font-size: 14px; }
+        article code { background: #fff; padding: 2px 6px; border-radius: 3px; font-size: 14px; }
+        article pre code { background: none; padding: 0; }
+        article blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 20px 0; color: var(--text-muted); }
+        article a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+        article a:hover { color: var(--accent); }
+        article img { max-width: 100%; height: auto; margin: 20px 0; }
+        footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+        footer a { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Kasper Junge</a>
+            <a href="/services/">Services</a>
+            <a href="/blog/">Blog</a>
+            <a href="/media/">Media</a>
+            <a href="/contact/">Contact</a>
+        </nav>
+
+        <h1>Skills Are Replacing Commands, Rules, and Subagents</h1>
+        <div class="post-meta">January 23, 2026</div>
+
+        <article>
+            <p>This might be obvious to many, but it just clicked for me while building <a href="https://github.com/kasperjunge/agent-resources">agent-resources</a>.</p>
+
+            <p>When Anthropic released the <a href="https://agentskills.io/">Agent Skills open standard</a> on December 18, 2025, <a href="https://github.blog/changelog/2025-12-18-github-copilot-now-supports-agent-skills/">GitHub announced support the same day</a>. <a href="https://developers.openai.com/codex/skills/">OpenAI Codex</a> followed shortly after. The consolidation is happening fast.</p>
+
+            <h2>The evidence</h2>
+            <ul>
+                <li><strong>Commands:</strong> <a href="https://developers.openai.com/codex/custom-prompts/">OpenAI Codex has deprecated custom prompts</a> in favor of skills. Claude Code's <a href="https://docs.claude.com/en/docs/claude-code/skills"><code>/slash-commands</code> documentation now redirects to the skills page</a> — skills are invoked as slash commands with <code>/skill-name</code>.</li>
+                <li><strong>Rules:</strong> <a href="https://cursor.com/docs/context/skills">Cursor includes a built-in <code>/migrate-to-skills</code></a> command that converts dynamic rules and slash commands into skills.</li>
+                <li><strong>Subagents:</strong> There's an <a href="https://github.com/anthropics/claude-code/issues/14661">open proposal to add <code>context: fork</code></a> to skills, allowing them to run in isolated context. Cursor's subagents docs recommend: "If you find yourself creating a subagent for a simple, single-purpose task... consider using a skill instead."</li>
+            </ul>
+
+            <h2>What skills don't replace</h2>
+            <p>Instruction files. Skills are task-specific capabilities. Instruction files (<code>CLAUDE.md</code>, <a href="https://agents.md/"><code>AGENTS.md</code></a>) are persistent environment context — project structure, conventions, workflows. You need both.</p>
+
+            <h2>Why I pivoted agent-resources</h2>
+            <p><a href="https://github.com/kasperjunge/agent-resources">agent-resources</a> originally supported skills, commands, rules, and subagents. I've now removed everything except skills. The other primitives are being absorbed — no point maintaining them.</p>
+            <p>Next up: instruction file templates. That's the gap that remains.</p>
+        </article>
+
+        <footer>
+            <a href="/blog/">← Back to blog</a>
+        </footer>
+    </div>
+</body>
+</html>
