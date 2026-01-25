@@ -1,33 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kasper Junge</title>
-    
-    
-    
-    
-    
-    
-    
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body>
-    <div class="container">
-        <nav>
-            <a href="/" class="active">Kasper Junge</a>
-            <a href="/services/">Services</a>
-            <a href="/blog/">Blog</a>
-            <a href="/media/">Media</a>
-            <a href="/contact/">Contact</a>
-        </nav>
-
-<h1>Kasper Junge</h1>
+---
+title: "Kasper Junge"
+nav: home
+---
+        <h1>Kasper Junge</h1>
 
         <section id="about" class="intro">
             <ul>
@@ -63,9 +38,8 @@
         <footer>
             Kasper Junge · Copenhagen, Denmark
         </footer>
-    </div>
-
-<script>
+---scripts---
+    <script>
         document.querySelectorAll('.github-stars').forEach(async (el) => {
             const repo = el.dataset.repo;
             try {
@@ -77,6 +51,3 @@
             } catch (e) {}
         });
     </script>
-
-</body>
-</html>

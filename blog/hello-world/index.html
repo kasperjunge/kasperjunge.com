@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- POST METADATA -->
     <title>Hello World — Kasper Junge</title>
     <meta name="description" content="Welcome to my new blog. A fresh start for sharing thoughts on AI, software engineering, and building things.">
     <meta name="author" content="Kasper Junge">
     <meta name="date" content="2026-01-22">
+    
     
     <!-- Open Graph -->
     <meta property="og:title" content="Hello World">
@@ -16,48 +15,26 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://kasperjunge.com/blog/hello-world">
     
+    
+    
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@JungeKasper">
     <meta name="twitter:title" content="Hello World">
     <meta name="twitter:description" content="Welcome to my new blog. A fresh start for sharing thoughts on AI, software engineering, and building things.">
     
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --bg: #fafafa; --text: #1a1a1a; --text-muted: #666; --accent: #0066cc; --border: #e0e0e0; }
-        body { font-family: 'IBM Plex Mono', monospace; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 15px; }
-        .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
-        nav { display: flex; gap: 24px; margin-bottom: 60px; flex-wrap: wrap; }
-        nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
-        nav a:hover { color: var(--text); }
-        h1 { font-size: 28px; font-weight: 600; margin-bottom: 16px; letter-spacing: -0.5px; }
-        .post-meta { color: var(--text-muted); font-size: 14px; margin-bottom: 48px; }
-        article { margin-bottom: 60px; }
-        article h2 { font-size: 20px; margin-top: 40px; margin-bottom: 16px; }
-        article h3 { font-size: 17px; margin-top: 32px; margin-bottom: 12px; }
-        article p { margin-bottom: 20px; }
-        article ul, article ol { margin: 20px 0; padding-left: 24px; }
-        article li { margin-bottom: 8px; }
-        article pre { background: #fff; border: 1px solid var(--border); padding: 16px; overflow-x: auto; margin: 20px 0; font-size: 14px; }
-        article code { background: #fff; padding: 2px 6px; border-radius: 3px; font-size: 14px; }
-        article pre code { background: none; padding: 0; }
-        article blockquote { border-left: 3px solid var(--border); padding-left: 20px; margin: 20px 0; color: var(--text-muted); }
-        article a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
-        article a:hover { color: var(--accent); }
-        article img { max-width: 100%; height: auto; margin: 20px 0; }
-        footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
-        footer a { color: var(--text-muted); }
-    </style>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <div class="container">
         <nav>
             <a href="/">Kasper Junge</a>
             <a href="/services/">Services</a>
-            <a href="/blog/">Blog</a>
+            <a href="/blog/" class="active">Blog</a>
             <a href="/media/">Media</a>
             <a href="/contact/">Contact</a>
         </nav>
@@ -67,23 +44,18 @@
 
         <article>
             <p>Welcome to my new blog.</p>
-            
             <p>After years of writing on Medium and other platforms, I decided to build something simple and owned. No analytics, no cookies, no complexity — just words on a page.</p>
-
             <h2>What to expect</h2>
             <p>I'll be writing about:</p>
             <ul>
-                <li>AI and LLMs — practical insights from building with them daily</li>
-                <li>Agentic coding — how AI is changing the way we write software</li>
-                <li>Open source — projects I'm working on and lessons learned</li>
-                <li>Random thoughts — whatever seems worth sharing</li>
+            <li>AI and LLMs — practical insights from building with them daily</li>
+            <li>Agentic coding — how AI is changing the way we write software</li>
+            <li>Open source — projects I'm working on and lessons learned</li>
+            <li>Random thoughts — whatever seems worth sharing</li>
             </ul>
-
             <h2>Why now?</h2>
             <p>The tools for building on the web have never been simpler. This entire site is just HTML and CSS — no frameworks, no build steps, no dependencies. It loads fast and will work for years.</p>
-            
             <p>Sometimes the best technology is the simplest.</p>
-
             <h2>Let's connect</h2>
             <p>Find me on <a href="https://x.com/JungeKasper">X</a> or <a href="https://www.linkedin.com/in/kasper-juunge/">LinkedIn</a>. I'd love to hear from you.</p>
         </article>
@@ -92,5 +64,6 @@
             <a href="/blog/">← Back to blog</a>
         </footer>
     </div>
+
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    {{#description}}<meta name="description" content="{{description}}">{{/description}}
+    {{#author}}<meta name="author" content="{{author}}">{{/author}}
+    {{#date}}<meta name="date" content="{{date}}">{{/date}}
+    
+    {{#og_title}}
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{og_title}}">
+    <meta property="og:description" content="{{og_description}}">
+    <meta property="og:type" content="{{og_type}}">
+    <meta property="og:url" content="{{og_url}}">
+    {{/og_title}}
+    
+    {{#twitter_title}}
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@JungeKasper">
+    <meta name="twitter:title" content="{{twitter_title}}">
+    <meta name="twitter:description" content="{{twitter_description}}">
+    {{/twitter_title}}
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/"{{#nav_home}} class="active"{{/nav_home}}>Kasper Junge</a>
+            <a href="/services/"{{#nav_services}} class="active"{{/nav_services}}>Services</a>
+            <a href="/blog/"{{#nav_blog}} class="active"{{/nav_blog}}>Blog</a>
+            <a href="/media/"{{#nav_media}} class="active"{{/nav_media}}>Media</a>
+            <a href="/contact/"{{#nav_contact}} class="active"{{/nav_contact}}>Contact</a>
+        </nav>
+
+{{content}}
+    </div>
+{{#scripts}}
+{{scripts}}
+{{/scripts}}
+</body>
+</html>
