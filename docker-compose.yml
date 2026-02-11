@@ -1,0 +1,88 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${POSTGRES_EXPOSE_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    ports:
+      - "${REDIS_EXPOSE_PORT:-6379}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      DATABASE_URL: ${DATABASE_URL}
+      SLACK_WEBHOOK_URL: ${SLACK_WEBHOOK_URL:-}
+      CORS_ORIGINS: ${BACKEND_CORS_ORIGINS:-http://localhost:8000}
+      RATE_LIMIT_ENABLED: ${RATE_LIMIT_ENABLED:-true}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      RATE_LIMIT_CONTACT: ${RATE_LIMIT_CONTACT:-10/minute}
+      RATE_LIMIT_ANALYTICS: ${RATE_LIMIT_ANALYTICS:-120/minute}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      LOG_JSON: ${LOG_JSON:-true}
+      LOG_FILE_PATH: ${LOG_FILE_PATH:-/var/log/kasperjunge/backend.log}
+      LOG_FILE_MAX_BYTES: ${LOG_FILE_MAX_BYTES:-10485760}
+      LOG_FILE_BACKUP_COUNT: ${LOG_FILE_BACKUP_COUNT:-5}
+    ports:
+      - "${BACKEND_PORT:-8001}:8000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - backend_logs:/var/log/kasperjunge
+    restart: unless-stopped
+
+  migrate:
+    build:
+      context: ./backend
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      DATABASE_URL: ${DATABASE_URL}
+      SLACK_WEBHOOK_URL: ${SLACK_WEBHOOK_URL:-}
+      CORS_ORIGINS: ${BACKEND_CORS_ORIGINS:-http://localhost:8000}
+      RATE_LIMIT_ENABLED: ${RATE_LIMIT_ENABLED:-true}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      RATE_LIMIT_CONTACT: ${RATE_LIMIT_CONTACT:-10/minute}
+      RATE_LIMIT_ANALYTICS: ${RATE_LIMIT_ANALYTICS:-120/minute}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      LOG_JSON: ${LOG_JSON:-true}
+      LOG_FILE_PATH: ${LOG_FILE_PATH:-/var/log/kasperjunge/backend.log}
+      LOG_FILE_MAX_BYTES: ${LOG_FILE_MAX_BYTES:-10485760}
+      LOG_FILE_BACKUP_COUNT: ${LOG_FILE_BACKUP_COUNT:-5}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: ["/app/scripts/run_migrations.sh"]
+    volumes:
+      - backend_logs:/var/log/kasperjunge
+    restart: "no"
+
+volumes:
+  postgres_data:
+  backend_logs:
