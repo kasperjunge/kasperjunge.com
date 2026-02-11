@@ -29,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/styles.css">
 </head>
-<body>
+<body data-analytics-url="/v1/analytics/pageview">
     <div class="container">
         <nav>
             <a href="/"{{#nav_home}} class="active"{{/nav_home}}>Kasper Junge</a>
@@ -41,6 +41,8 @@
 
 {{content}}
     </div>
+<script src="/static/config.js"></script>
+<script src="/static/site.js"></script>
 {{#scripts}}
 {{scripts}}
 {{/scripts}}
