@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separating Determinism from Reasoning — Kasper Junge</title>
+    <meta name="description" content="Use the LLM to identify deterministic behavior in your agent workflows, then extract it into scripts. The LLM finds the separation — code enforces it.">
+    <meta name="author" content="Kasper Junge">
+    <meta name="date" content="2026-01-27">
+    
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Separating Determinism from Reasoning">
+    <meta property="og:description" content="Use the LLM to identify deterministic behavior in your agent workflows, then extract it into scripts. The LLM finds the separation — code enforces it.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kasperjunge.com/blog/skills-as-optimization-targets">
+    
+    
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@JungeKasper">
+    <meta name="twitter:title" content="Separating Determinism from Reasoning">
+    <meta name="twitter:description" content="Use the LLM to identify deterministic behavior in your agent workflows, then extract it into scripts. The LLM finds the separation — code enforces it.">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Kasper Junge</a>
+            <a href="/services/">Services</a>
+            <a href="/blog/" class="active">Blog</a>
+            <a href="/media/">Media</a>
+            <a href="/contact/">Contact</a>
+        </nav>
+
+        <h1>Separating Determinism from Reasoning</h1>
+        <div class="post-meta">January 27, 2026</div>
+
+        <article>
+            <p>Agent workflows mix two types of work:</p>
+            <ul>
+            <li><strong>Reasoning</strong> — understanding context, making decisions, handling ambiguity</li>
+            <li><strong>Determinism</strong> — running commands in sequence, updating files in predictable patterns</li>
+            </ul>
+            <p>The reasoning is what LLMs are for. The determinism is just burning tokens.</p>
+            <h2>The refactoring pattern</h2>
+            <p>I've been using this prompt on my <a href="https://agentskills.io/">skills</a> (markdown files that define agent workflows):</p>
+            <pre><code>Review all skills. Look for opportunities to extract deterministic
+            behavior into scripts or CLI commands that the agent can use instead
+            of spending tokens doing it.
+            </code></pre>
+            <p>The LLM reads the workflow definitions and identifies patterns like:</p>
+            <ul>
+            <li>Sequential commands with early exit (run checks, stop on first failure)</li>
+            <li>File updates across multiple locations (bump version in two files)</li>
+            <li>Structured text manipulation (insert entry into correct changelog section)</li>
+            <li>Conditional logic based on known state (different git diff based on branch)</li>
+            </ul>
+            <p>For each pattern, it suggests a specific tool. Instead of the agent running four commands and interpreting results, a single <code>check</code> command with a structured exit code.</p>
+            <h2>Why this works</h2>
+            <p>The LLM is good at understanding intent and finding patterns — that's reasoning. Once it identifies a deterministic pattern, you extract it into code where it belongs.</p>
+            <p>The LLM finds the separation. Code enforces it.</p>
+            <p>This makes agents faster (fewer API calls), cheaper (fewer tokens), and more reliable (deterministic code vs probabilistic interpretation).</p>
+            <h2>The feedback loop</h2>
+            <ol>
+            <li>Write workflows as skills</li>
+            <li>Use the LLM to audit for deterministic patterns</li>
+            <li>Extract patterns into tooling</li>
+            <li>Update skills to use the new tools</li>
+            <li>Repeat</li>
+            </ol>
+            <p>Each iteration moves more determinism out of the LLM and into code, leaving the agent to focus on what it's actually good at.</p>
+        </article>
+
+        <footer>
+            <a href="/blog/">← Back to blog</a>
+        </footer>
+    </div>
+
+</body>
+</html>

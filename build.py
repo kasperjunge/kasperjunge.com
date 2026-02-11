@@ -269,6 +269,7 @@ def watch():
 def serve(port: int = 8000):
     """Start a local HTTP server."""
     handler = http.server.SimpleHTTPRequestHandler
+    socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(("", port), handler) as httpd:
         print(f"Serving at http://localhost:{port}")
         print("Press Ctrl+C to stop")

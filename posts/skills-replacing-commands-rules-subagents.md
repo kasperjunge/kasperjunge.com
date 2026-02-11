@@ -1,8 +1,8 @@
 ---
-title: "Skills Are Replacing Commands, Rules, and Subagents"
+title: Skills Are Replacing Commands, Rules, and Subagents
 slug: skills-replacing-commands-rules-subagents
 date: 2026-01-23
-description: "OpenAI deprecated custom prompts. Cursor built a migration tool. The evidence is clear: skills are replacing commands, rules, and subagents."
+description: OpenAI deprecated custom prompts. Cursor built a migration tool. The evidence is clear - skills are replacing commands, rules, and subagents.
 ---
 
 This might be obvious to some, but it just clicked for me while building [agent-resources](https://github.com/kasperjunge/agent-resources).

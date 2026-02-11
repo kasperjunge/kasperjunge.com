@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Claude Code Workflow - February 2026 — Kasper Junge</title>
+    <meta name="description" content="How I use Claude Code for daily development — my setup, habits, and what works.">
+    <meta name="author" content="Kasper Junge">
+    <meta name="date" content="2026-02-01">
+    
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="My Claude Code Workflow - February 2026">
+    <meta property="og:description" content="How I use Claude Code for daily development — my setup, habits, and what works.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kasperjunge.com/blog/my-claude-code-workflow">
+    
+    
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@JungeKasper">
+    <meta name="twitter:title" content="My Claude Code Workflow - February 2026">
+    <meta name="twitter:description" content="How I use Claude Code for daily development — my setup, habits, and what works.">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Kasper Junge</a>
+            <a href="/services/">Services</a>
+            <a href="/blog/" class="active">Blog</a>
+            <a href="/media/">Media</a>
+            <a href="/contact/">Contact</a>
+        </nav>
+
+        <h1>My Claude Code Workflow - February 2026</h1>
+        <div class="post-meta">February 1, 2026</div>
+
+        <article>
+            <p>I love reading blog posts on people's vibe coding workflows, for example Peter Steinberger's, creator of Clawdbot/Moltbot, <a href="https://steipete.me/posts/2025/shipping-at-inference-speed">Shipping at Inference-Speed</a>, so I thought I would make my own. Let's get straight to it.</p>
+            <p>First, I would like to send shoutouts to Dexter Horthy from HumanLayer, who inspired my current personal development workflow. In <a href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md">this blog post</a> Dexter describes his framework Research-Plan-Implement. Reading that blog post was really an eye opener to me. I <a href="https://vibe-coding.dk/">teach vibe coding to development teams</a> and have taught around 150 software developers so far in Research-Plan-Implement and every time my partner <a href="https://www.linkedin.com/in/cbechn/">Christian</a> and I host a workshop, we tell developers to pick real tasks from their backlog and most of them are able to get what is estimated for around 20 hours done in an hour or so using Research-Plan-Implement. It is really true magic, and I've seen senior architects at first sceptical about vibe coding sitting just speechless staring at their computer while the RPI framework does their work for them in a fraction of the time they could have done it.</p>
+            <p>Just to say, I've seen this work across many devs and teams. It is pure magic and a really great fundamental theory for thinking about agentic coding.</p>
+            <p>Okay now, let's actually get in to it!</p>
+            <h2>Setup</h2>
+            <p>As mentioned, I use Claude Code. I used to use a mix of slash commands, subagents, rules and scripts they could execute to develop processes for my AI agents. However, I recently noticed some patterns while developing <a href="https://github.com/kasperjunge/agent-resources">agent-resources</a>: </p>
+            <ol>
+            <li><a href="https://code.claude.com/docs/en/skills">Claude Code supports that you can invoke skills using /skillname , which basically provides behavior identical to slash commands.</a></li>
+            <li><a href="https://developers.openai.com/codex/custom-prompts/">Codex has deprecated prompts (their version of slash commands) and recommends using skills which can be invoked with /skillname</a></li>
+            <li><a href="https://code.claude.com/docs/en/skills#frontmatter-reference">Claude Code lets you set "context: fork" in skills, which makes it run in a forked subagent context - which enable skills to behave similarly to subagents</a></li>
+            <li>A skill with only name, description and body text is identical to rules, which are supported in Cursor and Claude Code.</li>
+            <li><a href="https://cursor.com/docs/context/subagents#when-to-use-subagents">Cursor recommends considering using skills when making a subagent.</a></li>
+            </ol>
+            <p>Skills can replace many of the other agentic primitives and the agent coding tools seems to slowly deprecate commands/prompts, rules and subagents, which all indicates that <a href="https://kasperjunge.com/blog/skills-replacing-commands-rules-subagents/">agent skills seems to be replacing commands, subagents and rules</a>.</p>
+            <p>So, I try to only use skills.</p>
+            <h2>Daily Workflow</h2>
+            <!-- How you typically use Claude Code throughout the day -->
+
+            <h2>What Works Well</h2>
+            <!-- Patterns and practices that have been effective -->
+
+            <h2>What I'm Still Figuring Out</h2>
+            <!-- Areas you're experimenting with or improving -->
+        </article>
+
+        <footer>
+            <a href="/blog/">← Back to blog</a>
+        </footer>
+    </div>
+
+</body>
+</html>
