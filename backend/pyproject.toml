@@ -1,0 +1,29 @@
+[project]
+name = "kasperjunge-backend"
+version = "0.1.0"
+description = "FastAPI backend for kasperjunge.com"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.14.1",
+    "email-validator>=2.2.0",
+    "fastapi>=0.115.8",
+    "httpx>=0.28.1",
+    "psycopg[binary]>=3.2.5",
+    "pydantic-settings>=2.7.1",
+    "redis>=5.2.1",
+    "sqlalchemy>=2.0.38",
+    "uvicorn[standard]>=0.34.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
