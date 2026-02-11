@@ -1,3 +1,10 @@
 .DS_Store
 media-links.txt
 .venv/
+.env
+backend/.venv/
+backend/.env
+backend/logs/
+__pycache__/
+*.pyc
+.pytest_cache/
