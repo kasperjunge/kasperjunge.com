@@ -5,49 +5,15 @@ nav: home
         <h1>Kasper Junge</h1>
 
         <section id="about" class="intro">
-            <ul>
-                <li>Founder of <a href="https://computerlove.tech">computerlove.tech</a>, building with LLMs and Generative AI.</li>
-                
-                <li>Co-founder of the <a href="https://ddsc.io">Danish Data Science Community</a>, a nonprofit with 1,200+ members.</li>
-                
-                <li><span class="highlight"><a href="https://hyperight.com/data-and-ai-influencer-of-the-year-nordic-dair-awards-2023/" style="text-decoration: none; color: inherit;">Nordic Data & AI Influencer of the Year 2023</a></span> — DAIR Award winner.</li>
-
-                <li>Cited in the <a href="https://www.youtube.com/shorts/4PWvRZRSEds?si=qDFDMwwkGUsTEAEL">Danish Parliament</a> on the importance of Danish language models.</li>
-                
-                <li>Open source projects:
-                    <ul>
-                        <li><a href="https://github.com/kasperjunge/agent-resources">agent-resources</a> — Package manager for AI agents <span class="github-stars" data-repo="kasperjunge/agent-resources"></span></li>
-                        <li><a href="https://github.com/kasperjunge/copcon">copcon</a> — Copy project context to clipboard for LLMs</li>
-                    </ul>
-                </li>
-
-                <li>Co-host of <a href="https://verbospodcast.dk/">Verbos Podcast</a> — Denmark's podcast for AI and software engineers.</li>
-
-                <li>Based in Copenhagen, Denmark.</li>
-            </ul>
+            <p>Co-founder of <a href="https://computerlove.tech">computerlove.tech</a>.</p>
 
             <div class="socials">
-                <a href="https://github.com/kasperjunge/">GitHub</a>
                 <a href="https://www.linkedin.com/in/kasper-juunge/">LinkedIn</a>
+                <a href="https://github.com/kasperjunge/">GitHub</a>
                 <a href="https://x.com/JungeKasper">X</a>
-                <a href="https://bsky.app/profile/kasperjunge.bsky.social">Bluesky</a>
-                <a href="https://www.youtube.com/channel/UCB1Cg40cN77lhbKBColnbCA">YouTube</a>
             </div>
         </section>
 
         <footer>
             Kasper Junge · Copenhagen, Denmark
         </footer>
----scripts---
-    <script>
-        document.querySelectorAll('.github-stars').forEach(async (el) => {
-            const repo = el.dataset.repo;
-            try {
-                const response = await fetch(`https://api.github.com/repos/${repo}`);
-                const data = await response.json();
-                if (data.stargazers_count) {
-                    el.textContent = `(${data.stargazers_count.toLocaleString()}+ ⭐)`;
-                }
-            } catch (e) {}
-        });
-    </script>
