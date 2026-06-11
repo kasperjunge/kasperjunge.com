@@ -8,10 +8,6 @@ on:
       - 'content/**'
       - 'templates/**'
       - 'static/**'
-  workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   build:
