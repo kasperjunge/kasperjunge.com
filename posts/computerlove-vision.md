@@ -2,7 +2,7 @@
 title: "We want to help knowledge workers securely delegate their work to AI agents"
 slug: computerlove-vision
 date: 2026-06-11
-description: "The vision and strategy for ComputerLove.tech: two bottlenecks stand between knowledge workers and real secure delegation to AI agents, skill and infrastructure, and everything we do attacks one of the two."
+description: "The vision and strategy for computerlove.tech: two bottlenecks stand between knowledge workers and real secure delegation to AI agents, skill and infrastructure, and everything we do attacks one of the two."
 ---
 
 I want to write down what we are actually about at computerlove.tech. Not because anything changed, but because being vocal about a vision is how it starts to live in other people's minds, and I would rather have people know exactly what we stand for than have them guess.
