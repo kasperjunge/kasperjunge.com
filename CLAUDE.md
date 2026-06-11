@@ -18,10 +18,6 @@ Personal website and blog for Kasper Junge.
 
 Note: the `README.md` describes an older hand-written HTML workflow. The real workflow is markdown posts in `posts/` built via `build.py` / the `justfile`.
 
-## Writing rules
+## Writing blog posts
 
-These are firm. Follow them in any prose written for this site.
-
-- Do not write in clipped, staccato sentence fragments for emphasis. Avoid things like "No problem statement. No user. No why." or "Great. Wonderful." or "Yes. A thousand times yes." Write in full, flowing sentences.
-- Do not use bold (`**...**`) in prose.
-- Never use em-dashes ("—"). Use a hyphen ("-") or restructure with a comma instead.
+When writing a blog post (or any prose) for this site, first read `docs/tone-of-voice.md` and write as Kasper. That document captures his writing voice, with verbatim examples to imitate, and the hard formatting rules (no staccato fragments, no bold, no em-dashes).
