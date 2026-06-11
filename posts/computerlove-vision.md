@@ -1,5 +1,5 @@
 ---
-title: "We want to help knowledge workers securely delegate their work to AI agents"
+title: "We want to enable knowledge workers to securely delegate their work to AI agents"
 slug: computerlove-vision
 date: 2026-06-11
 description: "The vision and strategy for computerlove.tech: two bottlenecks stand between knowledge workers and real secure delegation to AI agents, skill and infrastructure, and everything we do attacks one of the two."
