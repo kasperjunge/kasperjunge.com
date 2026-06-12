@@ -1,5 +1,5 @@
 ---
-title: "We want to enable knowledge workers to securely delegate their work to AI agents"
+title: "We want to enable knowledge workers to securely delegate work to AI agents"
 slug: computerlove-vision
 date: 2026-06-11
 description: "The vision and strategy for computerlove.tech: two bottlenecks stand between knowledge workers and real secure delegation to AI agents, skill and infrastructure, and everything we do attacks one of the two."
@@ -7,7 +7,7 @@ description: "The vision and strategy for computerlove.tech: two bottlenecks sta
 
 I want to write down what we are actually about at computerlove.tech. Not because anything changed, but because being vocal about a vision is how it starts to live in other people's minds, and I would rather have people know exactly what we stand for than have them guess.
 
-So here it is: our vision is to enable knowledge workers to securely delegate their work to AI agents.
+So here it is: our vision is to enable knowledge workers to securely delegate work to AI agents.
 
 That sentence is short, but every word in it is doing work, so let me unpack it. Between that vision and reality we have identified two bottlenecks, and everything we do as a company is ideally addressing one of the two.
 
@@ -23,7 +23,7 @@ And now this way of working is arriving for everyone. With tools like Claude Cow
 
 Agents are most effective when they can reach the tools you actually do your job with: your email, your calendar, the CRM, Slack or Teams, and all the systems you touch on a normal working day. Most of that software was built for humans clicking around in interfaces. It is not legible to agents, and there is a huge amount of infrastructure work to be done before it is, in connectivity, in making systems readable and operable for agents, in everything around it.
 
-But access cuts both ways. The same access that gives a knowledge worker superpowers can also let an agent do things it was never supposed to do. My favorite example is maybe a little sci-fi: HAL 9000 from 2001: A Space Odyssey is basically an AI agent with access to the spaceship through what is essentially an MCP server, including the life support of the crew in hibernation, and we all know how that goes. The realistic examples are less cinematic but the same shape. An agent accidentally sends an email containing information that should have stayed internal. A customer support agent has access to data across users, and suddenly one customer can query another customer's data. A lot of this is good old permissioning, deciding what you grant an agent access to and what you don't, but agents introduce a whole new class of security questions on top of it.
+But access cuts both ways. The same access that gives a knowledge worker superpowers can also let an agent do things it was never supposed to do. My favorite example is maybe a little sci-fi: HAL 9000 from 2001: A Space Odyssey is basically an AI agent with access to the spaceship's systems, including the life support of the crew in hibernation, and we all know how that goes. The realistic examples are less cinematic but the same shape. An agent accidentally sends an email containing information that should have stayed internal. A customer support agent has access to data across users, and suddenly one customer can query another customer's data. A lot of this is good old permissioning, deciding what you grant an agent access to and what you don't, but agents introduce a whole new class of security questions on top of it.
 
 This balance between superpowers and security is exactly the concern we hear from leaders, again and again. If you want delegation to actually happen inside an enterprise, security is not a feature you bolt on afterwards. It is the thing that makes the rest possible. That is why the word securely sits in the middle of our vision and not in the footnotes.
 
@@ -33,7 +33,7 @@ Our strategy has two legs, one for each bottleneck.
 
 The first leg is upskilling. We teach workshops for software developers working with tools like Claude Code, Codex and Cursor, and for general knowledge workers working with tools like Claude Cowork. Teaching makes us a living, so we do not have to raise funding, which is nice, but it does more than that. Every workshop is also discovery, because we learn an enormous amount about the market every time we are out talking to people about where they actually struggle. And honestly, we are just passionate about helping people learn this technology.
 
-The second leg is building product in the AI agent infrastructure space. Our current thesis is a single MCP server that enterprise employees and AI agents connect to, and that gives every employee and every agent secure, governed access to exactly the systems they have been granted, with fine-grained control on every single endpoint. I say thesis deliberately. We have not built it out in the industry yet, and we are humble about this being a new space. We know the vision and we know what we want to enable, but we would rather discover the right solution by implementing real things for real customers than settle on whatever we imagined from the office. That is what we are most eager to do right now: get out there and start solving real technical problems for real organizations.
+The second leg is building product in the AI agent infrastructure space. Our current thesis is a single gateway that enterprise employees and AI agents connect to, and that gives every employee and every agent secure, governed access to exactly the systems they have been granted, with fine-grained control on every single endpoint. I say thesis deliberately. We have not built it out in the industry yet, and we are humble about this being a new space. We know the vision and we know what we want to enable, but we would rather discover the right solution by implementing real things for real customers than settle on whatever we imagined from the office. That is what we are most eager to do right now: get out there and start solving real technical problems for real organizations.
 
 ## Why us
 
@@ -45,4 +45,6 @@ And there is one more thing our customers keep asking for: a neutral third party
 
 ## What I want you to take away
 
-There is no call to action here. I am not asking you to book a workshop or sign up for anything. I just want this picture to exist in your head: computerlove.tech is the company that wants to enable knowledge workers to securely delegate their work to AI agents, and we currently believe that the most effective way we can help companies get there now is by upskilling developers and knowledge workers, and by building the infrastructure that makes delegation safe.
+I want this picture to exist in your head: computerlove.tech is the company that wants to enable knowledge workers to securely delegate work to AI agents, and we currently believe that the most effective way we can help companies get there now is by upskilling developers and knowledge workers, and by building the infrastructure that makes delegation safe. If that picture is useful to someone in your network, pass it on.
+
+And if you are working in this space yourself, whether you are standing in front of these problems inside your organization or building things to solve them, reach out and connect. We want to talk to the people who are wrestling with the same questions, because that is how we make progress: by solving real problems together.
